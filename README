@@ -1,1 +1,23 @@
-network-labs/README.md
+# Cybersecurity Portfolio — Network Security Focus
+
+Welcome to my cybersecurity portfolio. This repository documents hands-on labs and projects focused on network security, traffic analysis, Linux system hardening, and SOC-style incident response workflows.
+
+## Portfolio Sections
+- 📁 [Network Security Labs](network-labs/)
+- 📁 Packet Analysis (coming soon)
+- 📁 Linux Hardening (coming soon)
+- 📁 Log Analysis (coming soon)
+- 📁 Incident Reports (coming soon)
+
+## Tools
+- Wireshark
+- Linux (Ubuntu)
+- Bash, grep, chmod, find
+- TCP/IP, DNS, HTTP, ARP
+- SOC workflows and incident response basics
+
+## About Me
+I am a physical security professional with a strong interest in cybersecurity and network security, currently building hands-on technical skills alongside my professional role. 
+My learning journey focuses on practical system hardening, traffic analysis, and SOC-style incident response through structured labs and real-world simulations.
+I am actively developing expertise in Linux security, packet capture and analysis, and log-based threat detection, with a long-term goal of contributing to secure, resilient, and mission-critical network environments. 
+This portfolio reflects my commitment to disciplined learning, ethical security practices, and continuous technical growth in the field of network defense and cyber operations.
