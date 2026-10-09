@@ -1,23 +1,114 @@
-# Cybersecurity Portfolio — Network Security Focus
+# Sumit Narayan | Cybersecurity Portfolio
 
-Welcome to my cybersecurity portfolio. This repository documents hands-on labs and projects focused on network security, traffic analysis, Linux system hardening, and SOC-style incident response workflows.
+**Network Security · SOC & Blue Team · Industrial Cybersecurity**
 
-## Portfolio Sections
-- 📁 [Network Security Labs](network-labs/)
-- 📁 Packet Analysis (coming soon)
-- 📁 Linux Hardening (coming soon)
-- 📁 Log Analysis (coming soon)
-- 📁 Incident Reports (coming soon)
+Welcome to my cybersecurity portfolio. This repository documents my cybersecurity training, hands-on laboratory exercises, technical projects, and research in network defense, security operations, digital forensics, and industrial cybersecurity.
 
-## Tools
-- Wireshark
-- Linux (Ubuntu)
-- Bash, grep, chmod, find
-- TCP/IP, DNS, HTTP, ARP
-- SOC workflows and incident response basics
+My objective is to develop practical cybersecurity capabilities while exploring how defensive security practices can strengthen the resilience of critical infrastructure.
 
 ## About Me
-I am a physical security professional with a strong interest in cybersecurity and network security, currently building hands-on technical skills alongside my professional role. 
-My learning journey focuses on practical system hardening, traffic analysis, and SOC-style incident response through structured labs and real-world simulations.
-I am actively developing expertise in Linux security, packet capture and analysis, and log-based threat detection, with a long-term goal of contributing to secure, resilient, and mission-critical network environments. 
-This portfolio reflects my commitment to disciplined learning, ethical security practices, and continuous technical growth in the field of network defense and cyber operations.
+
+I am a security professional building technical expertise in cybersecurity through structured training, independent study, and practical laboratory work.
+
+I am currently undertaking a **six-week Cybersecurity Training Programme at the Indian Institute of Technology Ropar (IIT Ropar)**. My previous learning includes Google Cybersecurity coursework, the **ISC2 Certified in Cybersecurity (CC)** certification, and a one-week cybersecurity course at the **Uttar Pradesh State Institute of Forensic Sciences**.
+
+Alongside formal training, I undertake practical exercises through TryHackMe, Cisco Networking Academy, and controlled virtual lab environments.
+
+My professional interests include network security, SOC and Blue Team operations, digital forensics, and the cybersecurity of industrial and maritime infrastructure.
+
+## Core Areas of Interest
+
+- **Network Security:** Network discovery, port scanning, protocol analysis, and traffic investigation.
+- **SOC & Blue Team:** Security monitoring, log analysis, alert triage, and incident-response fundamentals.
+- **Linux Security:** System administration, permissions, access control, and hardening.
+- **Digital Forensics & Technical Analysis:** Evidence-oriented investigation, static binary analysis, and security-focused experimentation.
+- **Industrial Cybersecurity:** IT/OT convergence, port cybersecurity, cyber-physical risk, and critical-infrastructure resilience.
+
+## Certifications, Training & Continuous Learning
+
+### Certification
+
+- **ISC2 Certified in Cybersecurity (CC)** — Earned.
+
+### Formal Training
+
+- **Indian Institute of Technology Ropar** — Six-week Cybersecurity Training Programme; currently undertaking.
+- **Google Cybersecurity** — Completed coursework; see the relevant course or certificate record for the official title.
+- **Uttar Pradesh State Institute of Forensic Sciences** — Completed one-week cybersecurity training.
+
+### Ongoing Technical Learning
+
+- **TryHackMe** — Hands-on cybersecurity rooms and practical exercises.
+- **Cisco Networking Academy** — Networking and cybersecurity coursework.
+
+This section distinguishes completed qualifications from ongoing training. Individual course titles, completion dates, and verification links will be added where applicable.
+
+## Selected Projects & Labs
+
+### Network Security & Traffic Analysis
+
+- Network discovery and port scanning using Nmap and Zenmap.
+- Examination of TCP/IP networking and common protocols.
+- Wireshark packet-capture and traffic-analysis exercises.
+
+[Explore Network Security Labs](network-labs/)
+
+### Linux Security & Administration
+
+- Linux file permissions and access-control exercises.
+- Command-line investigation and system administration.
+- Practical security configuration and troubleshooting.
+
+### Reverse Engineering & Binary Analysis
+
+- Static analysis of beginner-level password-validation binaries using Ghidra.
+- Examination of program control flow, character comparisons, and ASCII arithmetic.
+- Comparison of observed program behaviour with decompiled code.
+
+### Web Security Laboratory
+
+- Controlled web-security exercises using DVWA.
+- Study of SQL injection concepts and application input validation.
+- Documentation of test conditions, observations, and defensive lessons.
+
+### Industrial & Maritime Cybersecurity
+
+- Research on port cybersecurity and IT/OT convergence.
+- Study of cyber-physical security risks in critical infrastructure.
+- Analysis of maritime cyber incidents and relevant security guidance.
+
+Project reports will distinguish completed practical work from ongoing study and proposed future exercises.
+
+## Tools & Technologies
+
+**Network analysis:** Nmap, Zenmap, Wireshark
+
+**Operating systems:** Kali Linux, Ubuntu
+
+**Technical analysis:** Ghidra, Linux command line, Bash, Python fundamentals
+
+**Web security lab:** DVWA
+
+**Networking concepts:** TCP/IP, DNS, HTTP, ARP, ports and protocols
+
+Tools and concepts listed here reflect varying levels of hands-on exposure; this portfolio documents that progression transparently.
+
+## Research Interests
+
+- Cybersecurity of ports and maritime infrastructure
+- IT/OT convergence and industrial network defense
+- Security monitoring and incident response
+- Cyber-physical risk assessment
+- Digital forensics and technical investigation
+
+## Ethical Practice
+
+All security testing is conducted in authorized environments or against systems for which permission has been obtained. Technical findings are documented for educational and defensive purposes.
+
+This public portfolio excludes confidential operational information, credentials, and sensitive infrastructure configurations.
+
+## Connect
+
+- **GitHub:** [sumitnarayan](https://github.com/sumitnarayan)
+
+I welcome opportunities to learn, collaborate, and contribute to work involving network defense, security operations, and industrial cybersecurity.
