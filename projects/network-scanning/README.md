@@ -76,6 +76,17 @@ The comparison demonstrates that host availability affects scan results. The fir
 **Observation:** Compare the host-discovery status and TCP port states with Test 1. The results should be interpreted from the actual scan output rather than assuming that the machine being powered on guarantees that it is reachable.
 
 
+## 🗺️ Network Topology
+
+The following visualization was generated using Zenmap from an Nmap scan of the lab target.
+
+![Zenmap topology showing the Kali scanner and discovered target](03-nmap-topology.png)
+
+**Target:** `192.168.56.102`
+
+**Interpretation:** Zenmap displays the discovered target in relation to the local scanner.
+
+
 ## 5. Findings
 
 | Observation | Interpretation |
