@@ -1,6 +1,6 @@
-#🛡️ Sumit Narayan | Cybersecurity Portfolio
+####🛡️ Sumit Narayan | Cybersecurity Portfolio
 
-### 🔐 Network Security  •  🖥️ SOC & Blue Team  •  🏭 Industrial Cybersecurity
+## 🔐 Network Security  •  🖥️ SOC & Blue Team  •  🏭 Industrial Cybersecurity
 
 > Exploring cybersecurity through hands-on labs, structured training, technical analysis, and research into the protection of critical infrastructure.
 
