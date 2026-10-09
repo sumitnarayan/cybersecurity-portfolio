@@ -78,7 +78,36 @@ This filter selects IP traffic involving the server address and TCP port 8000.
 
 The TCP handshake can be documented separately using the captured SYN, SYN-ACK, and ACK packets if they are present in the saved capture.
 
-## 6. Key Learnings
+
+## 6. Packet-Level Analysis
+
+### Failed TCP connection attempts
+
+Several packets show TCP SYN requests from Kali Linux (`192.168.56.101`) to Ubuntu (`192.168.56.102`) on port `8000`. The server responds with RST, ACK packets.
+
+This indicates that the connection attempts were refused at those moments, consistent with the absence of a listening service on the destination port.
+
+![Wireshark capture showing TCP connection attempts and HTTP traffic on port 8000](01-wireshark-syn-ack.png)
+
+
+### Successful TCP and HTTP communication
+
+Later packets show the TCP three-way handshake:
+
+1. SYN from Kali to Ubuntu.
+2. SYN, ACK from Ubuntu to Kali.
+3. ACK from Kali to Ubuntu.
+
+The established connection carries an HTTP HEAD request for `/cctv/`, followed by an `HTTP/1.0 200 OK` response. Subsequent FIN, ACK packets indicate connection termination.
+
+### Key Finding
+
+The capture contains evidence of both refused TCP connection attempts and successful HTTP exchanges. This illustrates how Wireshark can help distinguish transport-layer connection failures from successful application-layer communication.
+
+The capture does not, by itself, establish the exact cause of the earlier failures.
+
+
+## 7. Key Learnings
 
 - How to generate HTTP traffic in a controlled virtual lab.
 - How to isolate traffic using Wireshark display filters.
@@ -86,13 +115,13 @@ The TCP handshake can be documented separately using the captured SYN, SYN-ACK, 
 - How HTTP response headers reveal status and content metadata.
 - How packet captures support network troubleshooting.
 
-## 7. Limitations
+## 8. Limitations
 
 - The exercise covered one client, one server, and one HTTP endpoint.
 - A successful HTTP response does not establish that the application is secure.
 - Observations are limited to the packets captured during the test.
 - The capture should be inspected for sensitive information before public release.
 
-## 8. Ethical Considerations
+## 9. Ethical Considerations
 
 The exercise was conducted in a controlled virtual lab using systems under my control. Packet capture and analysis should be performed only on networks for which appropriate authorization has been obtained.
