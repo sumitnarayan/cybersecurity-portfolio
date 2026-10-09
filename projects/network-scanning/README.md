@@ -59,12 +59,16 @@ A host reported as down is not necessarily physically offline: host discovery pr
 
 ## 📸 Scan Evidence
 
-### Test 1: Port Administration VM powered OFF and ON
+
+### Test 1: Test 1: Target VM powered off
+**Observation:** Nmap reported that the host appeared to be down and could not confirm that the target was reachable. This result was consistent with the target VM being powered off. However, blocked host-discovery probes can produce similar results. 
+
+### Test 2: Target VM powered on 
+**Observation:** With the Port Administration VM running, Nmap reported the target as up with a latency of approximately 22 ms. All 100 TCP ports examined by the quick scan were reported as closed.
 
 ![Nmap scan showing the target host as down and up](01-target-vm-down.png)
 
-**Observation:** Nmap could not confirm that the target host was up. This is consistent with the VM being powered off, although blocked discovery probes can produce a similar result. The next command shows- the host as UP. 
-
+The comparison demonstrates that host availability affects scan results. The first scan could not confirm that the host was up, while the second received a response. No open TCP ports were identified in the scanned set. This does not establish that every port or service on the machine is secure.
 ### Seaport Administration VM powered on
 
 ![Nmap scan of the running target VM](02-target-vm-running.png)
