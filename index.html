@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sumit Narayan's cybersecurity portfolio featuring network security, SOC and Blue Team labs, and industrial cybersecurity research.">
+  <title>Sumit Narayan | Cybersecurity Portfolio</title>
+
+  <style>
+    :root {
+      --bg: #0b1120;
+      --panel: #121c30;
+      --text: #e8eef8;
+      --muted: #a4b2c8;
+      --accent: #54d6b5;
+      --line: #263650;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container {
+      width: min(1080px, 90%);
+      margin: auto;
+    }
+
+    header {
+      border-bottom: 1px solid var(--line);
+      background: rgba(11, 17, 32, 0.96);
+    }
+
+    nav {
+      min-height: 72px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 14px 0;
+    }
+
+    .brand { font-weight: 700; color: var(--text); }
+    .nav-links { display: flex; gap: 20px; flex-wrap: wrap; font-size: 0.92rem; }
+
+    .hero { padding: 95px 0 80px; }
+
+    .eyebrow {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 7vw, 4.6rem);
+      line-height: 1.12;
+      margin: 18px 0;
+      letter-spacing: -1.5px;
+    }
+
+    .hero p {
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    .buttons { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 28px; }
+
+    .button {
+      display: inline-block;
+      padding: 11px 19px;
+      border: 1px solid var(--accent);
+      border-radius: 7px;
+      font-weight: 600;
+    }
+
+    .button.primary { background: var(--accent); color: #07151a; }
+    .button.secondary { color: var(--accent); }
+
+    section { padding: 62px 0; border-top: 1px solid var(--line); }
+
+    h2 { font-size: 1.8rem; margin: 0 0 10px; }
+    .section-intro { color: var(--muted); margin: 0 0 28px; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 23px;
+    }
+
+    .card h3 { margin: 0 0 10px; font-size: 1.1rem; }
+    .card p, .card li { color: var(--muted); font-size: 0.95rem; }
+    .card ul { padding-left: 20px; }
+    .tag {
+      display: inline-block;
+      font-size: 0.78rem;
+      color: var(--accent);
+      border: 1px solid #315b58;
+      border-radius: 20px;
+      padding: 3px 10px;
+      margin: 5px 4px 0 0;
+    }
+
+    .notice {
+      border-left: 3px solid var(--accent);
+      padding: 12px 18px;
+      background: var(--panel);
+      color: var(--muted);
+    }
+
+    footer {
+      padding: 30px 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .hero { padding: 65px 0; }
+      .nav-links { gap: 12px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="container">
+      <a class="brand" href="#home">🛡️ Sumit Narayan</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#learning">Learning</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home" style="border-top:0">
+      <div class="container">
+        <div class="eyebrow">Cybersecurity Portfolio</div>
+        <h1>Securing Networks.<br>Protecting Critical Infrastructure.</h1>
+        <p>
+          I am Sumit Narayan, a security professional exploring cybersecurity
+          through hands-on labs, structured training, technical analysis,
+          and research into industrial and maritime infrastructure.
+        </p>
+        <p>
+          🔐 Network Security &nbsp;·&nbsp; 🖥️ SOC & Blue Team
+          &nbsp;·&nbsp; 🏭 Industrial Cybersecurity
+        </p>
+        <div class="buttons">
+          <a class="button primary" href="#projects">Explore My Projects</a>
+          <a class="button secondary"
+             href="https://github.com/sumitnarayan/cybersecurity-portfolio"
+             target="_blank" rel="noopener noreferrer">View GitHub ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2>👨‍💻 About Me</h2>
+        <p class="section-intro">
+          Connecting security operations, technical learning, and critical-infrastructure resilience.
+        </p>
+        <p>
+          My background spans maritime security, industrial security, and
+          critical-infrastructure protection. I am expanding my technical
+          expertise in cybersecurity, with interests in network defense,
+          security monitoring, and IT/OT security.
+        </p>
+        <p>
+          My learning journey includes a cybersecurity training programme at
+          IIT Ropar, the ISC2 Certified in Cybersecurity (CC) certification,
+          Google Cybersecurity coursework, and practical exercises in
+          controlled lab environments.
+        </p>
+        <div class="notice">
+          My portfolio documents practical exercises, learning outcomes,
+          and research. Project findings are based on the specific lab
+          environments described in each project.
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <h2>🧰 Skills & Areas of Interest</h2>
+        <p class="section-intro">A developing technical toolkit supported by practical exercises.</p>
+        <div class="grid">
+          <article class="card">
+            <h3>🌐 Network Security</h3>
+            <p>Nmap, Zenmap, TCP/IP fundamentals, network discovery, and port scanning.</p>
+            <span class="tag">Nmap</span><span class="tag">TCP/IP</span>
+          </article>
+          <article class="card">
+            <h3>🖥️ SOC & Blue Team</h3>
+            <p>Security monitoring concepts, packet analysis, threat detection, and incident-response fundamentals.</p>
+            <span class="tag">Wireshark</span><span class="tag">Detection</span>
+          </article>
+          <article class="card">
+            <h3>🐧 Linux & Analysis</h3>
+            <p>Linux command line, permissions, basic system administration, and introductory binary analysis.</p>
+            <span class="tag">Linux</span><span class="tag">Ghidra</span>
+          </article>
+          <article class="card">
+            <h3>🏭 Industrial Cybersecurity</h3>
+            <p>Research interests in IT/OT convergence, maritime cybersecurity, and critical-infrastructure protection.</p>
+            <span class="tag">IT/OT</span><span class="tag">Maritime</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <h2>🔬 Hands-on Projects</h2>
+        <p class="section-intro">
+          Practical work and analysis conducted in controlled learning environments.
+        </p>
+        <div class="grid">
+          <article class="card">
+            <h3>01. Network Scanning Lab</h3>
+            <p>
+              Used Nmap and Zenmap to examine a virtual-machine target,
+              review scan results, and understand host discovery and port states.
+            </p>
+            <span class="tag">Nmap</span><span class="tag">VirtualBox</span>
+            <p><a href="projects/network-scanning/">View project →</a></p>
+          </article>
+          <article class="card">
+            <h3>02. Packet Analysis</h3>
+            <p>
+              Learning to inspect network traffic, interpret packet fields,
+              and understand common protocols using Wireshark.
+            </p>
+            <span class="tag">Wireshark</span><span class="tag">Packets</span>
+            <p><a href="projects/wireshark-analysis/">View project →</a></p>
+          </article>
+          <article class="card">
+            <h3>03. Binary Analysis with Ghidra</h3>
+            <p>
+              Examined sample programs to understand string checks,
+              input validation, and basic program control flow.
+            </p>
+            <span class="tag">Ghidra</span><span class="tag">Reverse Engineering</span>
+            <p><a href="projects/ghidra-reverse-engineering/">View project →</a></p>
+          </article>
+          <article class="card">
+            <h3>04. Web Application Security Lab</h3>
+            <p>
+              Exploring SQL injection concepts and application behavior
+              in an intentionally vulnerable, locally controlled lab.
+            </p>
+            <span class="tag">DVWA</span><span class="tag">Web Security</span>
+            <p><a href="projects/web-security/">View project →</a></p>
+          </article>
+        </div>
+        <p class="section-intro" style="margin-top:22px">
+          Project pages are planned additions. Links will work after the corresponding
+          folders and documentation are added to the repository.
+        </p>
+      </div>
+    </section>
+
+    <section id="learning">
+      <div class="container">
+        <h2>🎓 Certifications & Learning</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>ISC2 Certified in Cybersecurity (CC)</h3>
+            <p>Certification earned.</p>
+          </article>
+          <article class="card">
+            <h3>Google Cybersecurity</h3>
+            <p>Cybersecurity coursework completed; course details can be listed against the relevant certificates.</p>
+          </article>
+          <article class="card">
+            <h3>IIT Ropar</h3>
+            <p>Cybersecurity training programme — update this status and dates to reflect your current progress.</p>
+          </article>
+          <article class="card">
+            <h3>Continuous Learning</h3>
+            <p>Practical exercises and learning activities through TryHackMe and Cisco Networking Academy.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="research">
+      <div class="container">
+        <h2>📚 Research Interests</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Maritime Cybersecurity</h3>
+            <p>Cyber risks affecting port infrastructure, maritime systems, and connected operational environments.</p>
+          </article>
+          <article class="card">
+            <h3>IT/OT Convergence</h3>
+            <p>Security assessment approaches for industrial environments where information technology and operational technology intersect.</p>
+          </article>
+          <article class="card">
+            <h3>Critical Infrastructure</h3>
+            <p>Integrating physical security, cyber risk management, and resilience-oriented security practices.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2>📬 Connect With Me</h2>
+        <p class="section-intro">
+          Explore my work and follow my progress as I build practical cybersecurity skills.
+        </p>
+        <p>
+          <a class="button primary"
+             href="https://github.com/sumitnarayan/cybersecurity-portfolio"
+             target="_blank" rel="noopener noreferrer">GitHub Profile ↗</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Sumit Narayan · Cybersecurity Portfolio</p>
+      <p>Built with HTML and CSS · Hosted with GitHub Pages</p>
+    </div>
+  </footer>
+</body>
+</html>
