@@ -57,6 +57,21 @@ When the Ubuntu virtual machine was powered off, the target was reported as down
 
 A host reported as down is not necessarily physically offline: host discovery probes may be blocked or unanswered by a firewall or network configuration.
 
+## 📸 Scan Evidence
+
+### Test 1: Port Administration VM powered off
+
+![Nmap scan showing the target host as down](01-target-vm-down.png)
+
+**Observation:** Nmap could not confirm that the target host was up. This is consistent with the VM being powered off, although blocked discovery probes can produce a similar result.
+
+### Test 2: Port Administration VM powered on
+
+![Nmap scan of the running target VM](02-target-vm-running.png)
+
+**Observation:** Compare the host-discovery status and TCP port states with Test 1. The results should be interpreted from the actual scan output rather than assuming that the machine being powered on guarantees that it is reachable.
+
+
 ## 5. Findings
 
 | Observation | Interpretation |
