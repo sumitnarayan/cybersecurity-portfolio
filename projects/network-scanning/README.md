@@ -65,7 +65,7 @@ A host reported as down is not necessarily physically offline: host discovery pr
 
 **Observation:** Nmap could not confirm that the target host was up. This is consistent with the VM being powered off, although blocked discovery probes can produce a similar result.
 
-### Test 2: Port Administration VM powered on
+### Test 2: Seaport Administration VM powered on
 
 ![Nmap scan of the running target VM](02-target-vm-running.png)
 
