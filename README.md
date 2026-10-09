@@ -1,8 +1,16 @@
-####🛡️ Sumit Narayan | Cybersecurity Portfolio
+# 🛡️ Sumit Narayan
 
-## 🔐 Network Security  •  🖥️ SOC & Blue Team  •  🏭 Industrial Cybersecurity
+### Cybersecurity Portfolio
 
-> Exploring cybersecurity through hands-on labs, structured training, technical analysis, and research into the protection of critical infrastructure.
+🔐 Network Security · 🖥️ SOC & Blue Team · 🏭 Industrial Cybersecurity
+---
+>I am a security professional with exposure to maritime security, industrial security, and critical-infrastructure protection, expanding my expertise into cybersecurity.
+
+>🎓 Currently undertaking a six-week Cybersecurity Training Programme at IIT Ropar, building on my ISC2 Certified in Cybersecurity (CC) certification, Google Cybersecurity coursework, and training at the Uttar Pradesh State Institute of Forensic Sciences.
+
+>🔐 My interests include network defense, SOC/Blue Team operations, and bridging physical security with industrial and maritime cybersecurity to strengthen critical-infrastructure resilience.
+
+>Exploring cybersecurity through hands-on labs, structured training, technical analysis, and research into the protection of critical infrastructure.
 
 ---
 
