@@ -139,6 +139,73 @@
       .hero { padding: 65px 0; }
       .nav-links { gap: 12px; }
     }
+  
+/* Cybersecurity learning roadmap */
+.roadmap {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border: 1px solid var(--border, #30363d);
+  border-radius: 12px;
+  background: var(--card-bg, rgba(255, 255, 255, 0.02));
+}
+
+.roadmap-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.roadmap-header h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.roadmap-header p {
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+.roadmap-link {
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.roadmap-frame {
+  overflow: hidden;
+  border: 1px solid var(--border, #30363d);
+  border-radius: 8px;
+}
+
+.roadmap-frame iframe {
+  display: block;
+  width: 100%;
+  height: 600px;
+  border: 0;
+  background: #fff;
+}
+
+.roadmap-note {
+  margin: 0.75rem 0 0;
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
+@media (max-width: 640px) {
+  .roadmap {
+    padding: 1rem;
+  }
+
+  .roadmap-header {
+    flex-direction: column;
+  }
+
+  .roadmap-frame iframe {
+    height: 480px;
+  }
+}
+
   </style>
 </head>
 
