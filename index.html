@@ -206,6 +206,36 @@
   }
 }
 
+ 
+/* Animated cybersecurity hero heading */
+.hero-title {
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+#hero-animated-title {
+  display: inline-block;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#hero-animated-title.is-changing {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+#hero-animated-title.is-binary {
+  font-family: "Courier New", monospace;
+  font-size: 0.72em;
+  letter-spacing: 0.02em;
+  overflow-wrap: anywhere;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #hero-animated-title {
+    transition: none;
+  }
+}
+   
   </style>
 </head>
 
@@ -227,7 +257,11 @@
     <section class="hero" id="home" style="border-top:0">
       <div class="container">
         <div class="eyebrow">Cybersecurity Portfolio</div>
-        <h1>Securing Networks.<br>Protecting Critical Infrastructure.</h1>
+        
+<h1 class="hero-title">
+  <span id="hero-animated-title">Cyberphysical Systems Professional</span>
+</h1>
+
         <p>
          I am developing hands-on cybersecurity skills through network scanning, packet analysis, and virtual lab experiments. My background in industrial and security shapes my interest in protecting critical infrastructure, particularly where IT networks intersect with operational technology.
         </p>
@@ -436,6 +470,34 @@
       <p>Built with HTML and CSS · Hosted with GitHub Pages</p>
     </div>
   </footer>
+
+const animatedTitle = document.getElementById("hero-animated-title");
+
+if (
+  animatedTitle &&
+  !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+) {
+  const titles = [
+    { text: "Cybersecurity Engineer", binary: false },
+    { text: "01001000 01000001 01000011 01001011", binary: true }
+  ];
+
+  let currentIndex = 0;
+
+  setInterval(() => {
+    animatedTitle.classList.add("is-changing");
+
+    setTimeout(() => {
+      currentIndex = (currentIndex + 1) % titles.length;
+      animatedTitle.textContent = titles[currentIndex].text;
+      animatedTitle.classList.toggle(
+        "is-binary",
+        titles[currentIndex].binary
+      );
+      animatedTitle.classList.remove("is-changing");
+    }, 300);
+  }, 2500);
+}
 
 </body>
 </html>
