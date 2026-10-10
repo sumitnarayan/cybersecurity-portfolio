@@ -458,6 +458,7 @@
   </footer>
 
 
+
 <script>
 const animatedTitle = document.getElementById("hero-animated-title");
 
@@ -467,7 +468,7 @@ if (
 ) {
   const originalText = "Cybersecurity Engineer";
   const characters = [];
-  
+
   animatedTitle.replaceChildren();
 
   for (const character of originalText) {
@@ -475,46 +476,46 @@ if (
     span.className = "hero-char";
     span.textContent = character;
     animatedTitle.appendChild(span);
-    characters.push({ span, character });
+
+    if (character !== " ") {
+      characters.push({ span, character });
+    }
   }
 
-  let currentIndex = 0;
   let previousIndex = -1;
 
   function animateBinary() {
-    // Restore the previously changed character.
+    // Restore the previously changed letter.
     if (previousIndex >= 0) {
       const previous = characters[previousIndex];
       previous.span.textContent = previous.character;
       previous.span.classList.remove("is-bit");
     }
 
-    // Skip spaces between words.
-    while (
-      currentIndex < characters.length &&
-      characters[currentIndex].character === " "
-    ) {
-      currentIndex++;
-    }
+    // Randomly choose a different letter.
+    let nextIndex;
 
-    // Start again from the beginning.
-    if (currentIndex >= characters.length) {
-      currentIndex = 0;
-    }
+    do {
+      nextIndex = Math.floor(Math.random() * characters.length);
+    } while (
+      characters.length > 1 &&
+      nextIndex === previousIndex
+    );
 
-    // Transform the current character into 0 or 1.
-    const current = characters[currentIndex];
+    const current = characters[nextIndex];
+
+    // Randomly transform the letter into 0 or 1.
     current.span.textContent = Math.random() < 0.5 ? "0" : "1";
     current.span.classList.add("is-bit");
 
-    previousIndex = currentIndex;
-    currentIndex++;
+    previousIndex = nextIndex;
   }
 
   animateBinary();
   setInterval(animateBinary, 180);
 }
 </script>
+
 
 </body>
 </html>
