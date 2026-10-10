@@ -110,26 +110,29 @@ The capture contains evidence of both refused TCP connection attempts and succes
 The capture does not, by itself, establish the exact cause of the earlier failures. 
 The TCP establishment is actually a four-way process! Yes popularly called Three-Way Handshake. 
 
-Case #1:
+### Case #1:
 
-1. SYN--> from Kali to Ubuntu (client sends a SYN to Server)
-2. <-- ACK from Ubuntu to Kali (Server recognizes the SYN sent in the first step)
-3. <-- RST from Ubuntu to Kali (Server notifies the client that connection has closed with RST)
+1. **SYN -->** from Kali to Ubuntu (client sends a SYN to Server)
 
-These two packets are combined as ACK,RST and sent together. 
+2. **<-- ACK** from Ubuntu to Kali (Server recognizes the SYN sent in the first step)
 
-Three-Way Handshake Fails.
+3. **<-- RST** from Ubuntu to Kali (Server notifies the client that connection has closed with RST)
 
-#Case 2:
+These two packets are combined as ACK,RST and sent together.
 
-1. SYN--> from Kali to Ubuntu (client sends a SYN to Server)
-2. <-- ACK from Ubuntu to Kali (Server recognizes the SYN sent in the first step)
-3. <-- SYN from Ubuntu to Kali 
-4. --> ACK from Kali to Ubuntu
+**Three-Way Handshake Fails.**
 
-This represents a Three-Way Handshake established. 
+### Case #2:
 
-ACK,SYN packets are combined together by device for efficiency and hence represented in one instance in the wireshark.
+1. **SYN -->** from Kali to Ubuntu (client sends a SYN to Server)
+
+2. **<-- ACK** from Ubuntu to Kali (Server recognizes the SYN sent in the first step)
+
+3. **<-- SYN** from Ubuntu to Kali
+
+4. **--> ACK** from Kali to Ubuntu
+
+This represents a Three-Way Handshake established. ACK,SYN packets are combined together by device for efficiency and hence represented in one instance in the Wireshark.
 
 ## 7. Key Learnings
 
