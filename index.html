@@ -466,7 +466,7 @@ if (
   animatedTitle &&
   !window.matchMedia("(prefers-reduced-motion: reduce)").matches
 ) {
-  const originalText = "Cybersecurity Engineer";
+ const originalText = animatedTitle.textContent.trim();
   const characters = [];
 
   animatedTitle.replaceChildren();
