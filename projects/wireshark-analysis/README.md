@@ -85,6 +85,9 @@ The TCP handshake can be documented separately using the captured SYN, SYN-ACK, 
 
 Several packets show TCP SYN requests from Kali Linux (`192.168.56.101`) to Ubuntu (`192.168.56.102`) on port `8000`. The server responds with RST, ACK packets.
 
+RST (Reset): Tells the receiving device to tear down or abort a TCP connection immediately. It is an abrupt, forced closure rather than a graceful shutdown.
+ACK (Acknowledgment): Confirms that a previous packet or sequence number was received.
+
 This indicates that the connection attempts were refused at those moments, consistent with the absence of a listening service on the destination port.
 
 ![Wireshark capture showing TCP connection attempts and HTTP traffic on port 8000](01-wireshark-syn-ack.png)
@@ -94,9 +97,9 @@ This indicates that the connection attempts were refused at those moments, consi
 
 Later packets show the TCP three-way handshake:
 
-1. SYN from Kali to Ubuntu.
-2. SYN, ACK from Ubuntu to Kali.
-3. ACK from Kali to Ubuntu.
+1. SYN --> from Kali to Ubuntu.
+2. <-- SYN, ACK from Ubuntu to Kali. (SYN/ACK combined into one packet)
+3. ACK--> from Kali to Ubuntu.
 
 The established connection carries an HTTP HEAD request for `/cctv/`, followed by an `HTTP/1.0 200 OK` response. Subsequent FIN, ACK packets indicate connection termination.
 
@@ -104,7 +107,26 @@ The established connection carries an HTTP HEAD request for `/cctv/`, followed b
 
 The capture contains evidence of both refused TCP connection attempts and successful HTTP exchanges. This illustrates how Wireshark can help distinguish transport-layer connection failures from successful application-layer communication.
 
-The capture does not, by itself, establish the exact cause of the earlier failures.
+The capture does not, by itself, establish the exact cause of the earlier failures. 
+The TCP establishment is actually a four-way process! Yes popularly called Three-Way Handshake. 
+
+Case #1:
+SYN--> from Kali to Ubuntu (client sends a SYN to Server)
+<-- ACK from Ubuntu to Kali (Server recognizes the SYN sent in the first step)
+<-- RST from Ubuntu to Kali (Server notifies the client that connection has closed with RST)
+These two packets are combined as ACK,RST and sent together. 
+Three-Way Handshake Fails.
+
+#Case 2:
+SYN--> from Kali to Ubuntu (client sends a SYN to Server)
+<-- ACK from Ubuntu to Kali (Server recognizes the SYN sent in the first step)
+<-- SYN from Ubuntu to Kali 
+--> ACK from Kali to Ubuntu
+
+This represents a Three-Way Handshake established. ACK,SYN packets are combined together by device for efficiency and hence represented in one instance in the wireshark.
+
+
+ 
 
 
 ## 7. Key Learnings
