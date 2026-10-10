@@ -206,34 +206,20 @@
   }
 }
 
- 
-/* Animated cybersecurity hero heading */
-.hero-title {
-  line-height: 1.2;
-  overflow-wrap: anywhere;
-}
 
 #hero-animated-title {
-  display: inline-block;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  white-space: pre-wrap;
 }
 
-#hero-animated-title.is-changing {
-  opacity: 0;
-  transform: translateY(8px);
+#hero-animated-title .hero-char {
+  display: inline;
+  transition: color 0.12s ease;
 }
 
-#hero-animated-title.is-binary {
+#hero-animated-title .hero-char.is-bit {
+  color: #7cfac4;
   font-family: "Courier New", monospace;
-  font-size: 0.72em;
-  letter-spacing: 0.02em;
-  overflow-wrap: anywhere;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  #hero-animated-title {
-    transition: none;
-  }
+  font-weight: 800;
 }
    
   </style>
@@ -296,11 +282,11 @@
           Google Cybersecurity coursework, and practical exercises in
           controlled lab environments.
         </p>
-        <div class="notice">
+        <p>
           My portfolio documents practical exercises, learning outcomes,
           and research. Project findings are based on the specific lab
           environments described in each project.
-        </div>
+        </p>
       </div>
     </section>
 
@@ -471,6 +457,7 @@
     </div>
   </footer>
 
+
 <script>
 const animatedTitle = document.getElementById("hero-animated-title");
 
@@ -478,27 +465,56 @@ if (
   animatedTitle &&
   !window.matchMedia("(prefers-reduced-motion: reduce)").matches
 ) {
-  const titles = [
-    { text: "Cybersecurity Engineer", binary: false },
-    { text: "01001000 01000001 01000011 01001011", binary: true }
-  ];
+  const originalText = "Cybersecurity Engineer";
+  const characters = [];
+  
+  animatedTitle.replaceChildren();
+
+  for (const character of originalText) {
+    const span = document.createElement("span");
+    span.className = "hero-char";
+    span.textContent = character;
+    animatedTitle.appendChild(span);
+    characters.push({ span, character });
+  }
 
   let currentIndex = 0;
+  let previousIndex = -1;
 
-  setInterval(() => {
-    animatedTitle.classList.add("is-changing");
+  function animateBinary() {
+    // Restore the previously changed character.
+    if (previousIndex >= 0) {
+      const previous = characters[previousIndex];
+      previous.span.textContent = previous.character;
+      previous.span.classList.remove("is-bit");
+    }
 
-    setTimeout(() => {
-      currentIndex = (currentIndex + 1) % titles.length;
-      animatedTitle.textContent = titles[currentIndex].text;
-      animatedTitle.classList.toggle(
-        "is-binary",
-        titles[currentIndex].binary
-      );
-      animatedTitle.classList.remove("is-changing");
-    }, 300);
-  }, 2500);
+    // Skip spaces between words.
+    while (
+      currentIndex < characters.length &&
+      characters[currentIndex].character === " "
+    ) {
+      currentIndex++;
+    }
+
+    // Start again from the beginning.
+    if (currentIndex >= characters.length) {
+      currentIndex = 0;
+    }
+
+    // Transform the current character into 0 or 1.
+    const current = characters[currentIndex];
+    current.span.textContent = Math.random() < 0.5 ? "0" : "1";
+    current.span.classList.add("is-bit");
+
+    previousIndex = currentIndex;
+    currentIndex++;
+  }
+
+  animateBinary();
+  setInterval(animateBinary, 180);
 }
 </script>
+
 </body>
 </html>
